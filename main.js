@@ -9,11 +9,15 @@ const fatCat = {
     beg: function(treat) {
         console.log(`Fat Cat begs for ${treat}`)
     },
+    favoriteToys: [],
     play: function(toy) {
-        console.log(`Fat Cat begs to play with ${toy}`)
+    if (toy === "frisbee") {
+        this.favoriteToys.push(toy);
     }
+}
 }
 
 fatCat.bark("mailmain");
 fatCat.beg("treats");
 fatCat.play("frisbee");
+console.log(fatCat.favoriteToys);
